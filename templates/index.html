@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoTutor AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <div class="container">
+        <header class="hero">
+            <span class="badge">Adaptive AI Tutor</span>
+            <h1>MemoTutor AI</h1>
+            <p class="subtitle">
+                A study assistant that remembers your weak topics, teaching style, quiz performance,
+                and adapts over time.
+            </p>
+        </header>
+
+        <section class="card input-card">
+            <label for="message">Ask a topic, request a quiz, or submit a quiz answer</label>
+            <textarea id="message" placeholder="Explain chemical bonding in simple step-by-step way"></textarea>
+
+            <div class="buttons">
+                <button onclick="sendMessage('explain')">Explain</button>
+                <button onclick="sendMessage('quiz')">Create Quiz</button>
+                <button onclick="sendMessage('quiz_answer')">Submit Answer</button>
+                <button class="danger" onclick="resetMemory()">Reset Memory</button>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="card stat-card">
+                <h3>Last Topic</h3>
+                <p id="lastTopic">-</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Recommended Next</h3>
+                <p id="recommendedNext">-</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Weak Topics</h3>
+                <p id="weakTopics">-</p>
+            </div>
+            <div class="card stat-card">
+                <h3>Strong Topics</h3>
+                <p id="strongTopics">-</p>
+            </div>
+        </section>
+
+        <section class="content-grid">
+            <div class="card panel">
+                <h2>Assistant Reply</h2>
+                <pre id="reply">Your response will appear here...</pre>
+            </div>
+
+            <div class="card panel">
+                <h2>Memory State</h2>
+                <pre id="memory">Memory will appear here...</pre>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
