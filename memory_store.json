@@ -1,0 +1,26 @@
+{
+    "user_profile": {
+        "name": "Student",
+        "preferred_style": "simple",
+        "preferred_pace": "medium"
+    },
+    "weak_topics": [
+        "trigonometry"
+    ],
+    "strong_topics": [],
+    "mistakes": [
+        "Weak quiz answer in trigonometry: Its all about maths and angles.I don't know the rest"
+    ],
+    "recent_sessions": [
+        "Explain trigonometry",
+        "Make a quiz on trigonometry",
+        "Explain me trigonometry again in step-by-step"
+    ],
+    "topic_confidence": {
+        "trigonometry": 52
+    },
+    "quiz_history": [],
+    "last_topic": "trigonometry",
+    "recommended_next": "trigonometry",
+    "last_updated": "2026-03-20 16:48:51"
+}
