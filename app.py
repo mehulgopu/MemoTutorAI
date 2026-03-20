@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, jsonify
 from utils.memory import (
     load_memory,
@@ -86,8 +87,6 @@ def clear_memory():
         "memory": memory,
         "last_topic": ""
     })
-
-import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
